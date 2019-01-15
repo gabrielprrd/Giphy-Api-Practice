@@ -1,0 +1,266 @@
+:root {
+    --primary-color: #3F5866;
+    --secondary-color: #F0F0DF;
+    --tertiary-color: #FF8F00;
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    background: var(--primary-color);
+    height: 230px;
+    width: 100%;
+    margin-bottom: 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    color: #fff;
+    font-size: 2.4em;
+    margin-top: -25px;
+}
+
+#subtitle {
+    color: #fff;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+#myinput {
+    font-size: 1.3em;
+    border: none;
+    padding: 10px 30px 10px 30px; 
+    width: 370px;
+}
+
+#myselect {
+    font-size: 1.3em;
+    border: none;
+    padding: 9px 5px 9px 5px; 
+    width: 120px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: grey;
+}
+
+#button {
+    border: none;
+    padding: 10px 30px 10px 30px;
+    font-size:1.3em;
+    background: var(--tertiary-color);
+    color: white;
+    cursor: pointer;
+}
+
+#button:hover {
+    background: var(--tertiary-color);
+    transition: 0.3s;
+}
+
+.gifs-container {
+    background: var(--secondary-color);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-areas:"gifdiv gifdiv gifdiv";
+    justify-content: space-evenly;
+}
+
+.gifdiv {
+    grid-area: "gifdiv";
+    overflow: scroll;
+    max-width: 380px;
+    max-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.gifdiv:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+#main {
+    width: 100vw;
+    background: var(--secondary-color);
+}
+
+#loadmore-btn-container{
+    background: var(--secondary-color);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hiddenloadbtn{
+    display: none;
+}
+
+.showloadbtn {
+    border: none;
+    padding: 10px 30px 10px 30px;
+    font-size:1.3em;
+    background: var(--tertiary-color);
+    color: white;
+    cursor: pointer;
+    margin: 20px;
+}
+
+#loadbutton:hover {
+    background: var(--tertiary-color);
+    transition: 0.3s;
+}
+
+.newOutputClass {
+    background: var(--secondary-color);
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+#gotop-btn{
+    background: var(--tertiary-color);
+    padding: 8px 12px 8px 12px;
+    color: white;
+    position: fixed;
+    z-index: 2;
+    bottom: 25px;
+    right: 25px;
+    box-shadow: 1px 1px 3px rgb(65, 65, 65);
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+#gotop-btn:hover {
+    background: var(--tertiary-color);
+    transition: 0.3s;
+    cursor: pointer;
+}
+   
+
+/*------------Você concorda com nossa política blablabla----------------*/
+#you-agree {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    background: var(--primary-color);
+    width: 100%;
+    bottom: 0;
+    transition: height 0.2s ease-in;
+    height:0;
+    overflow: hidden;
+}
+
+#you-agree p {
+    display: flex;
+    color: white;
+    margin-left: 130px;
+}
+
+#you-agree a {
+    color: white;
+}
+
+#xbtn {
+    color: white;
+    cursor: pointer;
+    display: flex;
+    margin-right: 130px;
+}
+/*---------------- Tela de loading ------------*/
+
+#modal {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    background: var(--secondary-color);
+}
+
+/*--------------- RESPONSIVIDADE --------------*/
+
+@media (max-width: 1052px) {
+
+    #you-agree {
+        font-size: 0.8em;
+    }
+    
+    #you-agree p {
+        margin-left: 60px;
+    }
+    #xbtn {
+        margin-right: 60px;
+    }
+}
+
+@media (max-width: 943px) {
+
+    body {
+        font-size: 0.9em;
+        width: 943px;
+    }
+
+    #you-agree {
+        font-size: 0.75em;
+    }
+    
+    #you-agree p {
+        margin-left: 20px;
+    }
+    #xbtn {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 809px) {
+
+    #you-agree {
+        font-size: 0.7em;
+    }
+    
+    #you-agree p {
+        margin-left: 10px;
+    }
+    #xbtn {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 704px) {
+
+    #you-agree {
+        font-size: 0.85em;
+    }
+    
+    #you-agree p {
+        margin-left: 10px;
+    }
+    #xbtn {
+        margin-right: 10px;
+    }
+}

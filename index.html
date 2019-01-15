@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Giphy App</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <script src="/node_modules/sweetalert2/dist/sweetalert2.all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <h1 id="title">Gabriska's gif searcher</h1>
+        <p id="subtitle">A simple practice with the Giphy API</p>
+
+        <form id="input-container">
+
+            <input id="myinput" type="text" onfocus="this.value=''" placeholder="Type anything you wanna see">
+            <select id="myselect">
+                    <option name="gif" value="gif">Gifs</option>
+                    <option name="sticker" value="sticker">Stickers</option>
+            </select>
+            <button id="button">Show!</button>
+
+        </form>
+    </header>
+
+    <div id="main">
+        
+    </div>
+
+    <div id="loadmore-btn-container">
+        <button id="loadbutton" class="hiddenloadbtn">Load more</button>
+    </div>
+
+    <div id="gotop-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
+    <div id="you-agree">
+        <p>By using our site, you acknowledge that you have read and understand our&nbsp<a href="#">Cookie Policy</a>,&nbsp<a href="#">Privacy Policy</a>, and our&nbsp<a href="#">Terms of Service</a></p>
+        <span id="xbtn"><i class="fas fa-times" ></i></span>
+    </div>
+
+    <div id="modal">
+        <img src="/svgs/svgloading.svg">
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
