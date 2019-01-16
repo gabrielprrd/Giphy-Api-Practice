@@ -1,14 +1,4 @@
-let button = document.getElementById("button")
-button.addEventListener('click', getGifs);
-document.getElementById("myinput").addEventListener('keyup', triggerGetGifs);
-
-function triggerGetGifs(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        button.click();
-    }
-}
-
+document.getElementById("button").addEventListener('click', getGifs);
 var loadMore = document.getElementById("loadbutton");
 
 //------------- Barrinha sobre os termos de privacidade -----------------
@@ -134,7 +124,7 @@ function getGifs(event) {
             }else if (value === "sticker"){
                 var api = 'https://api.giphy.com/v1/stickers/search?';
             }
-            openModal();
+            openModal(); 
         offset = offset + 18;
         var newrest = '&limit=18&offset='+offset+'&rating=G&lang=en';
         var apiKey = '&api_key=wn5MJ9xGyh5vLC5S0gM0w5u09XSoaYt9&q=';
