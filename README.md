@@ -1,4 +1,4 @@
-#Gabriska's Gif Searcher
+# Gabriska's Gif Searcher
 
 This is just a simple practice using the Giphy API where the user search for any word or term and the website displays a list of gifs or stickers.
 
